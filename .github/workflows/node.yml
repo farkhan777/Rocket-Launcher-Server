@@ -25,4 +25,7 @@ jobs:
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
       - run: npm install
+      - run: npm config set user 0
+      - run: npm config set unsafe-perm true
       - run: npm test
+      
