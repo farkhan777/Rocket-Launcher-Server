@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "test":"jest",
+    "test-watch": "jest --watchAll",
     "watch": "nodemon srx/server.js",
     "start": "set PORT=5000&& node src/server.js"
   },
