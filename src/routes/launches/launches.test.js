@@ -1,9 +1,11 @@
 const request = require('supertest');
 const app = require('../../app');
 const { mongoConnect, mongoDisconnect } = require('../../dbConnect');
+const { loadPlanetsData } = require('../../model/planetsModel');
 
 beforeAll(async () => {
   await mongoConnect();
+  await loadPlanetsData();
 });
 
 afterAll(async () => {
