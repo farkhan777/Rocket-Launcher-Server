@@ -8,9 +8,9 @@
 4. In the terminal, run: `npm install`
 
 ## Running the Project
-
-1. In the terminal, run: `npm start`
-2. Browse to the mission control frontend at [localhost:3000](http://localhost:3000) and schedule an interstellar launch!
+1. Change cors origin in app.js from "http://108.136.237.66:5000" to "http://localhost:3000"
+2. In the terminal, run: `npm start`
+3. Browse to the mission control frontend at [localhost:3000](http://localhost:3000) and schedule an interstellar launch!
 
 ## Docker
 
