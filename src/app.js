@@ -6,7 +6,8 @@ const api = require('./api')
 const app = express()
 
 var corsOptions = {
-    origin: 'http://localhost:3000'
+    // origin: 'http://localhost:3000'
+    origin: 'http://108.136.158.67:3000'
 }
 
 app.use(morgan('combined'))
