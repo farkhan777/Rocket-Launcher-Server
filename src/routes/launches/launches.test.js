@@ -42,7 +42,7 @@ describe('Test POST /v1/launches', () => {
         launchDate: 'zoot',
     };
 
-    test('It should respond with 200 seuccess', async () => {
+    test('It should respond with 201 seuccess', async () => {
         const response = await request(app)
         .post('/v1/launches')
         .send(completeLaunchData)
@@ -61,10 +61,10 @@ describe('Test POST /v1/launches', () => {
           .post('/v1/launches')
           .send(launchDataWithoutDate)
           .expect('Content-Type', /json/)
-          .expect(400);
+          .expect(401);
     
         expect(response.body).toStrictEqual({
-          error: 'Missing required launch property',
+          error: 'Missing required values',
         });
       });
 
