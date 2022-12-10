@@ -21,6 +21,15 @@ describe('Test GET /v1/launches', () => {
     });
 });
 
+describe('Test GET /v1/planets', () => {
+  test('should respond with 200 success', async () => { 
+      const response = await request(app)
+      .get('/v1/planets')
+      .expect('Content-Type', /json/)
+      .expect(200);
+  });
+});
+
 describe('Test POST /v1/launches', () => {
     const completeLaunchData = {
         mission: 'USS Enterprise',
